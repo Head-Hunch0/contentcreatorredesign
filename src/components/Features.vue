@@ -158,6 +158,10 @@ interface ToolCard {
     useCase?: string
 }
 
+const getImageUrl = (path: string) => {
+    return import.meta.env.BASE_URL + path.replace(/^\//, '')
+}
+
 // Assets Section Data
 const assetsHeader = ref<Header>({
     title: 'Our Most Popular Assets',
@@ -169,19 +173,19 @@ const assets = ref<Asset[]>([
         id: 1,
         title: 'LUTs for Color Grading',
         description: 'Our LUTs work flawlessly with any editing software, giving your videos that professional, cinematic look in seconds',
-        imageUrl: '/luts.svg'
+        imageUrl: getImageUrl('/luts.svg')
     },
     {
         id: 2,
         title: 'Text & Title Templates',
         description: 'With our professionally-designed text templates, you can create scroll-stopping, binge-worthy content in seconds.',
-        imageUrl: '/templates.svg'
+        imageUrl: getImageUrl('/templates.svg')
     },
     {
         id: 3,
         title: 'Overlays & Backgrounds',
         description: 'Overlays make it super easy! Just drag it onto your video, change the blend mode — your video has a whole new style.',
-        imageUrl: '/overlays.svg'
+        imageUrl: getImageUrl('/overlays.svg')
     }
 ])
 
@@ -221,7 +225,7 @@ const cardsData = ref<ToolCard[]>([
         description: "Generate scroll-stopping Instagram posts, TikTok thumbnails, and Facebook ads in seconds. Our AI understands what makes content go viral and helps you replicate that magic every single time.",
         author: 'Sarah Thompson',
         date: '16 April 2023',
-        image: '/social.svg',
+        image: getImageUrl('/social.svg'),
         useCase: 'Social Media Posts'
     },
     {
@@ -232,7 +236,7 @@ const cardsData = ref<ToolCard[]>([
         description: "Whether you need logos, brochures, flyers, or complete brand kits — our AI tools help you create professional graphic design assets without hiring an expensive designer. Just describe what you need, and watch it come to life.",
         author: 'David Wilson',
         date: '15 April 2023',
-        image: '/social.svg',
+        image: getImageUrl('/social.svg'),
         useCase: 'Graphic Design'
     },
     {
@@ -243,7 +247,7 @@ const cardsData = ref<ToolCard[]>([
         description: "YouTube creators are using our tools to design thumbnails that get clicks. Our AI analyzes what's working in your niche and generates attention-grabbing visuals that make viewers stop and click. More clicks = more views = more revenue.",
         author: 'Emily Roberts',
         date: '14 April 2023',
-        image: '/social.svg',
+        image: getImageUrl('/social.svg'),
         useCase: 'YouTube Thumbnails'
     },
     {
@@ -254,7 +258,7 @@ const cardsData = ref<ToolCard[]>([
         description: "Stop wasting money on ads that don't convert. Generate multiple ad variations in seconds, test different visuals, and find what resonates with your audience — all without hiring a creative team. Facebook, Google, TikTok — we support them all.",
         author: 'Michael Anderson',
         date: '13 April 2023',
-        image: '/social.svg',
+        image: getImageUrl('/social.svg'),
         useCase: 'Online Ads'
     },
     // Audio Tools
@@ -266,7 +270,7 @@ const cardsData = ref<ToolCard[]>([
         description: "Stop waiting for voice talent or expensive studio time. Generate natural, emotion-filled voiceovers in dozens of languages and voices. Perfect for YouTube videos, commercials, e-learning, and explainer videos — all with a few clicks.",
         author: 'Jessica Lee',
         date: '12 April 2023',
-        image: '/audio.svg',
+        image: getImageUrl('/audio.svg'),
         useCase: 'AI Voiceovers'
     },
     {
@@ -277,7 +281,7 @@ const cardsData = ref<ToolCard[]>([
         description: "Create a perfect digital replica of your own voice for consistent branding. Or generate entirely new character voices for animations, games, and storytelling. Your audience will never know it's AI.",
         author: 'Chris Evans',
         date: '11 April 2023',
-        image: '/audio.svg',
+        image: getImageUrl('/audio.svg'),
         useCase: 'AI Voice Clones'
     },
     {
@@ -288,7 +292,7 @@ const cardsData = ref<ToolCard[]>([
         description: "From automatic noise reduction to leveling and mastering — our AI handles post-production so you can focus on your message. Remove ums and ahs, add intro/outro music, and publish studio-quality episodes in record time.",
         author: 'Nina Martinez',
         date: '10 April 2023',
-        image: '/audio.svg',
+        image: getImageUrl('/audio.svg'),
         useCase: 'Podcasts'
     },
     {
@@ -299,7 +303,7 @@ const cardsData = ref<ToolCard[]>([
         description: "Record once, swap voices instantly. Perfect for dubbing content, creating multilingual versions, or experimenting with different vocal styles. Save hours of re-recording time and reach global audiences effortlessly.",
         author: 'Alex Turner',
         date: '9 April 2023',
-        image: '/audio.svg',
+        image: getImageUrl('/audio.svg'),
         useCase: 'Voice Swaps'
     },
     // Video Tools
@@ -311,7 +315,7 @@ const cardsData = ref<ToolCard[]>([
         description: "Turn your vision into reality. Generate storyboards, color grade like Hollywood pros, and add VFX that used to cost thousands — all with AI. Perfect for indie filmmakers and content creators who want that premium look.",
         author: 'Oliver Chen',
         date: '8 April 2023',
-        image: '/video.svg',
+        image: getImageUrl('/video.svg'),
         useCase: 'Cinematic Films'
     },
     {
@@ -322,7 +326,7 @@ const cardsData = ref<ToolCard[]>([
         description: "Generate multiple ad variations in seconds. Our AI analyzes what drives clicks and sales, then helps you create compelling video ads for Facebook, YouTube, TikTok, and Instagram — all without a production budget.",
         author: 'Sophia Rodriguez',
         date: '7 April 2023',
-        image: '/video.svg',
+        image: getImageUrl('/video.svg'),
         useCase: 'Video Ads'
     },
     {
@@ -333,7 +337,7 @@ const cardsData = ref<ToolCard[]>([
         description: "Short-form content is king. Our tools help you edit, add captions, apply trending effects, and optimize your vertical videos for maximum engagement. Join creators getting millions of views using our templates.",
         author: 'Liam Walker',
         date: '6 April 2023',
-        image: '/video.svg',
+        image: getImageUrl('/video.svg'),
         useCase: 'Reels & TikToks'
     },
     {
@@ -344,7 +348,7 @@ const cardsData = ref<ToolCard[]>([
         description: "From eye-catching intros to seamless transitions and retention-boosting edits — our AI helps you create content that ranks, retains, and converts viewers into subscribers. Stop guessing, start growing.",
         author: 'Emma Davis',
         date: '5 April 2023',
-        image: '/video.svg',
+        image: getImageUrl('/video.svg'),
         useCase: 'YouTube Videos'
     }
 ])
