@@ -1,0 +1,14 @@
+/* @tailwind base; */
+/* @tailwind components; */
+@tailwind utilities;
+@import "tailwindcss";
+
+/* Add this for better accordion support */
+@layer utilities {
+  .group-open\:flex {
+    display: flex;
+  }
+  .group-open\:hidden {
+    display: none;
+  }
+}
