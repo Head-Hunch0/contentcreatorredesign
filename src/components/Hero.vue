@@ -237,6 +237,12 @@
 
     <section>
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 cursor-pointer group"
+        :class="[
+            'bottom-4',      // Mobile default (16px)
+            'sm:bottom-6',   // 640px+ (24px)  
+            'md:bottom-8',   // 768px+ (32px)
+            'lg:bottom-10'   // 1024px+ (40px)
+        ]"
             title="Scroll down">
             <div class="flex flex-col items-center gap-3">
                 <!-- Mouse with moving wheel -->
