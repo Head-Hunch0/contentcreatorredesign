@@ -126,6 +126,9 @@ const navItems = ref<NavItem[]>([
     { text: 'Features', href: '#', title: 'Features' },
     { text: 'Assets', href: '#', title: 'Assets' },
     { text: 'FAQs', href: '#', title: 'FAQs' },
+    { text: 'Audio', href: '#', title: 'Audios' },
+    { text: 'Video', href: '#', title: 'Videos' },
+    { text: 'LUTs', href: '#', title: 'Luts' },
     { text: 'Pricing', href: '#', title: 'Pricing' }
 ])
 

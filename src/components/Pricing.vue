@@ -1,5 +1,46 @@
 <template>
+
+    <section class="lg:px-16">
+        <div
+            class="mb-8 rounded-2xl bg-gradient-to-r from-slate-50 to-neutral-50 p-6 lg:p-12 border border-neutral-200">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="flex items-start gap-3">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900">How PromptEdit Credits Work</h3>
+                        <p class="text-sm text-slate-600 mt-1">Think of credits like <span class="font-medium">gas for
+                                your AI car</span>. Buy once, use on any tool. No monthly fee. Run out? Buy more.
+                            Simple.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 text-sm">
+                    <div class="text-center">
+                        <div class="font-bold text-slate-900">1 credit</div>
+                        <div class="text-xs text-slate-500">≈ $0.89 value</div>
+                    </div>
+                    <div class="w-px bg-neutral-300"></div>
+                    <div class="text-center">
+                        <div class="font-bold text-slate-900">5-15 credits</div>
+                        <div class="text-xs text-slate-500">per AI generation</div>
+                    </div>
+                    <div class="w-px bg-neutral-300"></div>
+                    <div class="text-center">
+                        <div class="font-bold text-slate-900">No expiration</div>
+                        <div class="text-xs text-slate-500">credits never expire</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
     <section class="pt-12 lg:pt-16 pb-12 lg:pb-16">
+        <div class="mt-6 w-full border-b border-b-neutral-100 lg:mt-8"></div>
         <div class="max-w-7xl mx-auto px-4 xl:px-0">
             <div class="flex flex-col">
                 <div
@@ -108,11 +149,38 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- Trust badges -->
+        <div class="mt-10 flex flex-wrap justify-center gap-4 text-xs text-slate-500">
+            <div class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>30-day refund on unused credits</span>
+            </div>
+            <div class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Credits never expire</span>
+            </div>
+            <div class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                </svg>
+                <span>PayPal & credit cards accepted</span>
+            </div>
+        </div>
     </section>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+
 
 // Type definitions
 interface Bonus {
@@ -147,9 +215,9 @@ interface Header {
 
 // Reactive data
 const header = ref<Header>({
-    badge: 'Get full access',
-    title: 'A Subscription to PromptEdit.com, which includes the Content Creator Templates Library is for you',
-    subtitle: 'Existing Student Discount'
+    badge: '🎯 Exclusive Student Offer',
+    title: 'Start Creating Today with Zero Subscription Lock-In',
+    subtitle: 'You already invested in learning. Now invest in creating. Get special pricing as an AI Creator Course student – cancel anytime, no questions asked.'
 })
 
 const pricingPlans = ref<PricingPlan[]>([
